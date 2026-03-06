@@ -9,9 +9,7 @@ const Header = ({ onNavigate, currentView }) => {
           <div className="logo-icon-container">
             <FiBookOpen className="logo-icon" />
           </div>
-          <h1 className="logo-text">
-            Study<span className="text-gradient">Explain</span> <span className="logo-badge">AI</span>
-          </h1>
+          <h1 className="logo-text">Note<span className="text-gradient">Lingo</span></h1>
         </div>
         
         <nav className="header-nav">
