@@ -1,0 +1,218 @@
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  z-index: 10;
+  position: relative;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  animation: fadeUp 0.8s cubic-bezier(0.68, -0.55, 0.26, 1.55) forwards;
+  opacity: 0;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.quick-guide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(123, 66, 246, 0.1);
+    border: 1px solid rgba(123, 66, 246, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.guide-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.step-number {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.step-text {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.guide-arrow {
+    color: var(--accent-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@media (max-width: 768px) {
+    .quick-guide {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .guide-arrow {
+        transform: rotate(90deg);
+    }
+}
+.start-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  animation: fadeUp 0.6s cubic-bezier(0.68, -0.55, 0.26, 1.55) forwards;
+}
+
+.start-btn {
+  font-size: 1.15rem;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 30px var(--accent-glow);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.26, 1.55);
+}
+
+.start-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 40px var(--accent-glow);
+}
+
+/* Features Section */
+.features-section {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-glass);
+  animation: fadeUp 1.2s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.5s forwards;
+  opacity: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-bounce);
+  cursor: default;
+  border: 1px solid var(--border-glass);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-glass);
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .main-content {
+    padding: 0 1rem 2rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,7 @@
+This is a test document for translation.
+
+Artificial Intelligence is a branch of computer science that aims to create intelligent machines.
+
+Key concepts include machine learning, neural networks, and natural language processing.
+
+The technology has applications in healthcare, education, and finance.
