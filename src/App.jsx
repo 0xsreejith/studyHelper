@@ -6,7 +6,6 @@ import ModeSelector from './components/ModeSelector';
 import ProcessingScreen from './components/ProcessingScreen';
 import ResultViewer from './components/ResultViewer';
 import UnifiedUpload from './components/UnifiedUpload';
-import Tools from './components/Tools';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -74,10 +73,6 @@ function App() {
                 </div>
               )}
             </>
-          )}
-
-          {currentView === 'tools' && (
-            <Tools />
           )}
 
           {currentView === 'processing' && (

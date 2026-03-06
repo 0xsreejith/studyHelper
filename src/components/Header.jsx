@@ -1,5 +1,5 @@
 import './Header.css';
-import { FiBookOpen, FiTool } from 'react-icons/fi';
+import { FiBookOpen } from 'react-icons/fi';
 
 const Header = ({ onNavigate, currentView }) => {
   return (
@@ -21,13 +21,6 @@ const Header = ({ onNavigate, currentView }) => {
             onClick={(e) => { e.preventDefault(); onNavigate('home'); }}
           >
             Home
-          </a>
-          <a 
-            href="#" 
-            className={`nav-link ${currentView === 'tools' ? 'active' : ''}`}
-            onClick={(e) => { e.preventDefault(); onNavigate('tools'); }}
-          >
-            <FiTool /> Tools
           </a>
         </nav>
       </div>

@@ -70,18 +70,18 @@ async function postToTranslate(text, sourceLang, targetLang) {
 
 async function translatePage(pageText, onProgress) {
     const chunks = splitIntoChunks(pageText, 500);
-    const translatedChunks = [];
 
-    for (let i = 0; i < chunks.length; i++) {
-        const translated = await postToTranslate(chunks[i], 'en', 'ml');
-        translatedChunks.push(translated);
+    const promises = chunks.map((chunk) =>
+        postToTranslate(chunk, "en", "ml")
+    );
 
-        if (onProgress) {
-            onProgress(i + 1, chunks.length);
-        }
+    const translatedChunks = await Promise.all(promises);
+
+    if (onProgress) {
+        onProgress(chunks.length, chunks.length);
     }
 
-    return translatedChunks.join(' ');
+    return translatedChunks.join(" ");
 }
 
 export async function translateDocument(pages, onProgress) {
