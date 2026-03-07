@@ -84,6 +84,9 @@ def health() -> dict:
         "service": "google-translate-endpoint",
     }
 
+@app.get("/ping")
+def ping():
+    return {"status": "alive"}
 
 @app.post("/translate", response_model=TranslateResponse)
 def translate(payload: TranslateRequest) -> TranslateResponse:
